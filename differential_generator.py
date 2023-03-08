@@ -1,6 +1,6 @@
 from collections import deque
 
-# variant with 'for'
+# variant with 'for' 
 
 def delta_with_for(values, n):
     deq = deque()
@@ -12,7 +12,6 @@ def delta_with_for(values, n):
             deq[i]=deq[i+1] - deq[i]
     yield deq.popleft()
             
-
 def delta_with_while(values, n):
 
     values_iter = iter(values)
