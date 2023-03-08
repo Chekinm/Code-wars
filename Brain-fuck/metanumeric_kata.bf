@@ -22,11 +22,11 @@ here is my version of this
 
 , read number
 
-<<<<+>>>>   made a watermark for two recgnase two cases later
+<<<<+>>>>   made a watermark to recognize two cases later
 
 
 
-[>>+<<                   faind if our number greater or not to 128
+[>>+<<                   find if our number greater or not then 128
  >+<-[>+<-[>+<-[>+<-
 [>+<-[>+<-[>+<-[>+<-
 [>+<-[>+<-[>+<-[>+<-
@@ -96,8 +96,8 @@ here is my version of this
 <-> ] <-> ] <-> ] <->]
 <-> ] <-> ] <-> ] <->]
 <-> ] <-> ] <-> ] <-<]
->> we are on  cell 0 and we know if num bigger than 128 or not 
->>> let's check cell 3 0 mean less 1 bigger than 128
+>> we are on  cell 0 and we know if  our num is bigger than 128 or not 
+>>> let's check cell 3     '0' mean less        '1' means bigger than 128
 [   case biger then 128
 
 -<-<
@@ -106,7 +106,7 @@ to use negative notation need to subscribe our number from 128
 >>>>>>>++[<++>-]<[<++>-]<[<++>-]<[<++>-]<[<++>-]
 <[<++>-]<<
 [>-<-]>
-[<+>-]<        we are in the cell 0 and we have number to nimus to get right answer
+[<+>-]<        we are in the cell 0 and we have number to minus to get right answer
 
 
 [>>+<<
