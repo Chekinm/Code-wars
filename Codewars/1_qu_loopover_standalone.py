@@ -12,6 +12,11 @@ class puzzle(list):
         self.n = 0
         self.is_solved = False
 
+    def __str__(self):
+        return ("------------------------\n" +
+                '\n'.join([str(_) for _ in self]) +
+                "\n------------------------\n")
+
     def create_matrix(self, m, n):
         """ create matrix m x n, filled with number from 0 to m*n
             m - number of rows
@@ -204,13 +209,16 @@ ref_m = puzzle()
 ref_m.create_matrix(m, n)
 
 #  ref_m[m-1][n-1],ref_m[m-1][n-2] = ref_m[m-1][n-2],ref_m[m-1][n-1]
-print('-----------------------------------------')
-print(*ref_m, sep='\n')
-print('-----------------------------------------')
+# print('-----------------------------------------')
+# print(*ref_m, sep='\n')
+# print('-----------------------------------------')
+print("Original\n",ref_m)
+
 
 # -------------------------START TO SOLVE --------------------------------#
 
-print(*problem, sep='\n')
+print("Suffled\n",problem)
+# print(*problem, sep='\n')
 
 print('-----------------------------------------')
 
@@ -229,7 +237,7 @@ while True:
             break
         problem.shuffle(5)
 
-print(*problem, sep='\n')
+print("solved\n", problem)
 print('-----------------------------------------')
 print(problem.history)
 print('-----------------------------------------')
