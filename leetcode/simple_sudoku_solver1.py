@@ -1,4 +1,5 @@
 import numpy as np
+from copy import deepcopy
 
 
 def check_row(sud, x, y):
@@ -22,15 +23,29 @@ def check_square(sud, x, y):
     sud[x][y][1] -= tmp_set
     return sud
 
-
-def sudoku(puzzle):
+def sudoku_prepare(puzzle):
     """ solve the given sudoku according rules of the sudoku,
         it is supposed that every time we can find a cell with unique number allowed"""
     for i in range(len(puzzle)):
         for j in range(len(puzzle)):
-            puzzle[i][j] = [puzzle[i][j], set(i for i in range(1, 10))]
-    sud = np.array(puzzle)
+            puzzle[i][j] = [int(puzzle[i][j]), set(i for i in range(1, 10))]
+    return np.array(puzzle)
+
+def sudoku_deliver(sud):
+    puzzle = np.zeros(9,9)
+    np.count_nonzero
+    for i in range(len(puzzle)):
+        for j in range(len(puzzle)):
+            puzzle[i][j] = str(sud[i][j][0])
+    return puzzle
+
+
+def sudoku_try(sud):
+    """ solve the given sudoku according rules of the sudoku,
+        trying until too consecutive try is the same"""
+
     while 0 in sud:
+        sud_prev = deepcopy(sud)
         for i in range(len(puzzle)):
             for j in range(len(puzzle)):
                 if sud[i][j][0] == 0:
@@ -39,7 +54,31 @@ def sudoku(puzzle):
                     check_square(sud, i, j)
                     if len(sud[i][j][1]) == 1:
                         sud[i][j][0] = sud[i][j][1].pop()
-    for i in range(len(puzzle)):
-        for j in range(len(puzzle)):
-            puzzle[i][j] = sud[i][j][0]
-    return puzzle
+        if sud == sud_prev:
+            return sud, False
+
+    return sud, True
+
+def sudoku_guess(puzzle):
+    pass
+def main(puzzle):
+    sud = sudoku_prepare(puzzle)
+    sud, solved = sudoku_try(sud)
+    if solved:
+        return sudoku_prepare(sud)
+    else:
+        while not solved:
+            for i in range(len(sud)):
+                for j in range(len(sud)):
+                    for guessed in sud[i][j][1]:
+                        sud_g = deepcopy((sud)):
+                        sud_g[i][j] = guessed
+                        sud_g, flag = sudoku_try(sud_g)
+                        if flag:
+                            return sudoku_prepare(sud_g)
+
+
+
+
+
+
