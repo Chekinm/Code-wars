@@ -1,3 +1,12 @@
+
+                                Hi breainfuck lover
+                      Byt the way I'm looking for a developer job
+                              talk to me if you can help
+                  there is a link to my linkied in gitub in profile here
+                  
+                             anyway enjoy the solution
+                 
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 hello brain fuckers 
 here is my version of this 

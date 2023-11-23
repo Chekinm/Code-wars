@@ -1,3 +1,15 @@
+
+
+                                Hi breainfuck lover
+                      Byt the way I'm looking for a developer job
+                              talk to me if you can help
+                  there is a link to my linkied in gitub in profile here
+                  
+                             anyway enjoy the solution
+                 
+
+
+
 >>>>>>>>>                               prepare place for our words filled with commas
                                         we will then subscribe 44 from each input 
                                         if we will see zero it will means that we run into comma
