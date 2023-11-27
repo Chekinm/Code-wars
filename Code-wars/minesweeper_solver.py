@@ -38,7 +38,7 @@ class Map:
 
     def copy(self):
         return Map(str(self), self.mines)
-    
+
     def get_unresolved(self):
         unresolved = []
         for x in range(self.len_x):
