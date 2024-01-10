@@ -20,7 +20,7 @@ class Map:
     finnaly solution is not as clean as I supposed in the begining
     but it works, and no more ofre left to refactor may be later:)
     enjoy"""
-    
+
     def __init__(self, task: str, mines: int) -> None:
         self.matrix = [row.split() for row in task.split('\n')]
         self.len_x = len(self.matrix)
@@ -250,14 +250,12 @@ class Map:
                             print(f'magic works, found safe space at {x1}, {y1}')
                             self.set_field(x1, y1, str(open(x1, y1)))
                                     
-
                     elif len(diff) == true_value - region_number_of_mines:
                         for x1, y1 in diff:
                             print(f'magic works, found MINE at {x1}, {y1}')
                             self.set_field(x1, y1, 'x')
                             self.mines -= 1
                             
-
                     elif len(diff) > true_value - region_number_of_mines:
                         print(f'{diff=}, {true_value - region_number_of_mines=}')
                         self.check_coords_aginst_dict(

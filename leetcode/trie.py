@@ -41,4 +41,4 @@ class Trie:
             else:
                 return False
         return True
-    
+
