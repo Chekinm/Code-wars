@@ -9,8 +9,7 @@ class TrieObj:
 class Trie:
 
     def __init__(self):
-        self.head = TrieObj(None) 
-
+        self.head = TrieObj(None)
 
     def insert(self, word):
         curr_node = self.head
@@ -20,7 +19,7 @@ class Trie:
             else:
                 curr_node.childs[letter] = TrieObj(letter)
                 curr_node = curr_node.childs[letter]
-        curr_node.has_elem = True   
+        curr_node.has_elem = True
 
     def search(self, word):
         curr_node = self.head
@@ -41,4 +40,3 @@ class Trie:
             else:
                 return False
         return True
-

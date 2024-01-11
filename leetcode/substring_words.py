@@ -1,6 +1,9 @@
+from collections import Counter, deque
+
+
 class Solution:
-    from collections import Counter, deque
-    def findSubstring(self, s: str, words: List[str]) -> List[int]:
+
+    def findSubstring(self, s: str, words: list[str]) -> list[int]:
 
         result = []
 
@@ -22,7 +25,7 @@ class Solution:
                     if local_count_dict[word] == 0:
                         del local_count_dict[word]
                     
-            return True      
+            return True
         
         for i in range(len(s) - len_sub + 1):
             sub_str = s[i:i + len_sub]
