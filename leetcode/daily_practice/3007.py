@@ -1,7 +1,3 @@
-s =  111
-x = 3
-
-
 def count(power, curr_sum=0, prev_sum=None, max_sum=111, x=1, num=0, base_num=0, base_add=0):
     if prev_sum is None:
         prev_sum = {}
