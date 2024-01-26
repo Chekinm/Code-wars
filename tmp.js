@@ -1,17 +1,16 @@
-var undefined = 2
-console.log(undefined)
-var a
-console.log(a)
-console.log(undefined)
-var a = undefined
-console.log(a)
-b = []
-b[5] = 100
-console.log(b[1])
-c = b[1] + 3
-console.log(c) 
-
-console.log(true)
+console.log('1')
 
 
 
+b = new Promise((resolve, reject) => {
+    a = setTimeout(()=>{
+        console.log('from promise')
+    },0)
+    resolve()
+})
+a = setTimeout(()=>{
+    console.log('from timeout')
+},0)
+
+
+console.log('2')
