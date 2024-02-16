@@ -1,16 +1,9 @@
-console.log('1')
+class Person = function (nums){
+    this.nums = nums
+}
+let Person.prototype.toString = function(){
+    return('Hello', nums)
+}
 
-
-
-b = new Promise((resolve, reject) => {
-    a = setTimeout(()=>{
-        console.log('from promise')
-    },0)
-    resolve()
-})
-a = setTimeout(()=>{
-    console.log('from timeout')
-},0)
-
-
-console.log('2')
+n = new Person([1,2,3])
+console.log(n)
