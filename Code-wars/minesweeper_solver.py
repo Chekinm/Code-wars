@@ -17,8 +17,8 @@ from itertools import combinations
 
 class Map:
     """all magic will occur inside the class map
-    finnaly solution is not as clean as I supposed in the begining
-    but it works, and no more ofre left to refactor may be later:)
+    finally solution is not as clean as I supposed in the begining
+    but it works, and no more power left to refactor, may be later:)
     enjoy"""
 
     def __init__(self, task: str, mines: int) -> None:
@@ -275,7 +275,7 @@ class Map:
             value = int(value)
             mines, quests, opens, total, surr = self.count_surrounding(x, y)
 
-            if quests == 0:  # we know everything around this fild, cannot do nothing 
+            if quests == 0:  # we know everything around this field, cannot do anything 
                 return
 
             if value == mines:  # we know where all the mines is. others are clear, can dive depper
@@ -283,9 +283,9 @@ class Map:
                     if value == '?':
                         new_value = str(open(x1, y1))
                         self.set_field(x1, y1, new_value)
-                        self.open_around_field(x1,y1) # here regresion magic occurs
+                        self.open_around_field(x1,y1) # here regresion occurs
     
-            elif quests <= (value - mines):  # '?' around equal to value- already open mines => all of them are mines
+            elif quests <= (value - mines):  # '?' around equal to value - already open mines => all of them are mines
                 for x2, y2, value2 in surr:
                     if value2 == '?':
                         self.set_field(x2, y2, 'x')
@@ -298,7 +298,7 @@ def fight_with_problem_cells(m: Map):
     # most of the corner case will lead you here
     # like one cell, one mine etc
     
-    # also brute fores algo performs here
+    # also brute force algo performs here
     
     # let see what has left unresolved
     unresolved = m.get_unresolved()
@@ -310,15 +310,15 @@ def fight_with_problem_cells(m: Map):
         return str(m)
     
     elif len(unresolved) == 2 or len(unresolved) > 20: # unlucky we are
-        # 2 - means there are alwayes two solutions => unpredictable,
-        # 20 means we are luck of resorcese, most probsably it is an efficency testcase,
+        # 2 - means there are always two solutions => unpredictable,
+        # 20 means we are luck of resources, most probably it is an efficiency testcase,
         # which should return '?'
         # just drop it...
         return '?'
 
     else:
-        # finnaly, looks like we only have less than 20 fileds.
-        # think we can brute force it.
+        # finnaly, looks like we only have less than 20 fields.
+        # think we can brute-force it.
         # will check all combination of mines 
         
         variants = combinations(unresolved, m.mines)
@@ -401,7 +401,7 @@ def solve_mine(map, n):
                 print('********before bruteforce********')
                 
                 bf = fight_with_problem_cells(m)
-                # fight_with_problem_cells return '?' if unresolvabel,
+                # fight_with_problem_cells return '?' if unresolveable,
                 # or do changes in map (m) in-place, so we will go futher
                 if bf == '?':
                     # give up :(
